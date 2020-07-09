@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JX6-DB-xMT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,124 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="video_player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10Q-gn-UBs">
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="XRJ-Xb-wU9"/>
+                                    <constraint firstAttribute="height" constant="128" id="xNl-48-6Jr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyg-ix-Dbn">
+                                <rect key="frame" x="15" y="763" width="384" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playvideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mXS-CD-hWl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jyg-ix-Dbn" secondAttribute="bottom" constant="15" id="19D-v5-Llg"/>
+                            <constraint firstItem="10Q-gn-UBs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BmW-A5-7Wz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jyg-ix-Dbn" secondAttribute="trailing" constant="15" id="VbI-ef-e8x"/>
+                            <constraint firstItem="Jyg-ix-Dbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="u2B-L6-z1U"/>
+                            <constraint firstItem="10Q-gn-UBs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xWO-pT-L5u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="z9N-y3-350"/>
+                    <connections>
+                        <outlet property="videoView" destination="10Q-gn-UBs" id="sOd-6V-mw5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="371" y="-6"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VMZ-hM-umZ">
+            <objects>
+                <viewController id="JX6-DB-xMT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTi-ZE-wOY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB3-H5-1KS">
+                                <rect key="frame" x="15" y="817" width="384" height="30"/>
+                                <state key="normal" title="Play Video"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="QK2-no-jMf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-ET-4eM">
+                                <rect key="frame" x="15" y="772" width="384" height="30"/>
+                                <state key="normal" title="Play Audio"/>
+                                <connections>
+                                    <segue destination="4no-OV-1e0" kind="show" id="EKD-HU-ZvJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0vj-ZN-zPs" firstAttribute="bottom" secondItem="jB3-H5-1KS" secondAttribute="bottom" constant="15" id="8iN-gI-zNX"/>
+                            <constraint firstItem="jB3-H5-1KS" firstAttribute="trailing" secondItem="LOx-ET-4eM" secondAttribute="trailing" id="9XP-sn-DWj"/>
+                            <constraint firstItem="0vj-ZN-zPs" firstAttribute="trailing" secondItem="jB3-H5-1KS" secondAttribute="trailing" constant="15" id="FQ0-ps-V7V"/>
+                            <constraint firstItem="jB3-H5-1KS" firstAttribute="leading" secondItem="0vj-ZN-zPs" secondAttribute="leading" constant="15" id="GhV-Uu-syD"/>
+                            <constraint firstItem="jB3-H5-1KS" firstAttribute="top" secondItem="LOx-ET-4eM" secondAttribute="bottom" constant="15" id="igP-aM-IU3"/>
+                            <constraint firstItem="jB3-H5-1KS" firstAttribute="leading" secondItem="LOx-ET-4eM" secondAttribute="leading" id="yRV-Yr-gdM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0vj-ZN-zPs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqJ-3F-XJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-907.24637681159425" y="-321.42857142857139"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="v2W-tP-xRT">
+            <objects>
+                <viewController id="4no-OV-1e0" customClass="AudioViewController" customModule="video_player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RSu-la-dNU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4Y-Jc-hpO">
+                                <rect key="frame" x="15" y="763" width="384" height="30"/>
+                                <state key="normal" title="Play AAC"/>
+                                <connections>
+                                    <action selector="playAACSound:" destination="4no-OV-1e0" eventType="touchUpInside" id="4ec-oJ-0Vl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tot-R5-hBL">
+                                <rect key="frame" x="15" y="718" width="384" height="30"/>
+                                <state key="normal" title="Play AMR"/>
+                                <connections>
+                                    <action selector="playAMRSound:" destination="4no-OV-1e0" eventType="touchUpInside" id="OpR-pA-5cR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x4Y-Jc-hpO" firstAttribute="trailing" secondItem="tot-R5-hBL" secondAttribute="trailing" id="XIB-fe-qhj"/>
+                            <constraint firstItem="l1E-ha-ZCY" firstAttribute="trailing" secondItem="x4Y-Jc-hpO" secondAttribute="trailing" constant="15" id="d2f-41-QI6"/>
+                            <constraint firstItem="x4Y-Jc-hpO" firstAttribute="top" secondItem="tot-R5-hBL" secondAttribute="bottom" constant="15" id="g9u-C3-P6y"/>
+                            <constraint firstItem="l1E-ha-ZCY" firstAttribute="bottom" secondItem="x4Y-Jc-hpO" secondAttribute="bottom" constant="15" id="qoo-4S-1YX"/>
+                            <constraint firstItem="x4Y-Jc-hpO" firstAttribute="leading" secondItem="tot-R5-hBL" secondAttribute="leading" id="r20-g0-rzf"/>
+                            <constraint firstItem="x4Y-Jc-hpO" firstAttribute="leading" secondItem="l1E-ha-ZCY" secondAttribute="leading" constant="15" id="u3z-9E-gAu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l1E-ha-ZCY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uV3-vz-gHv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ne9-xo-nWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="-739"/>
         </scene>
     </scenes>
 </document>

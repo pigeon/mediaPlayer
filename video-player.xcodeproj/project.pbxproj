@@ -13,6 +13,10 @@
 		485302B324B70F48005278AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485302B124B70F48005278AB /* Main.storyboard */; };
 		485302B524B70F49005278AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485302B424B70F49005278AB /* Assets.xcassets */; };
 		485302B824B70F49005278AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485302B624B70F49005278AB /* LaunchScreen.storyboard */; };
+		485302C024B7100B005278AB /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 485302BF24B7100B005278AB /* video.mp4 */; };
+		485302C224B71F6E005278AB /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485302C124B71F6E005278AB /* AudioViewController.swift */; };
+		485302C424B72118005278AB /* aac.aac in Resources */ = {isa = PBXBuildFile; fileRef = 485302C324B72118005278AB /* aac.aac */; };
+		485302C624B721C0005278AB /* amr.amr in Resources */ = {isa = PBXBuildFile; fileRef = 485302C524B721C0005278AB /* amr.amr */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		485302B424B70F49005278AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		485302B724B70F49005278AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485302B924B70F49005278AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485302BF24B7100B005278AB /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video.mp4; path = "../../../../Downloads/audio n video samples/video.mp4"; sourceTree = "<group>"; };
+		485302C124B71F6E005278AB /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		485302C324B72118005278AB /* aac.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = aac.aac; path = "../../../../Downloads/audio n video samples/aac.aac"; sourceTree = "<group>"; };
+		485302C524B721C0005278AB /* amr.amr */ = {isa = PBXFileReference; lastKnownFileType = file; name = amr.amr; path = "../../../../Downloads/audio n video samples/amr.amr"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		485302AA24B70F48005278AB /* video-player */ = {
 			isa = PBXGroup;
 			children = (
+				485302C524B721C0005278AB /* amr.amr */,
+				485302C324B72118005278AB /* aac.aac */,
+				485302BF24B7100B005278AB /* video.mp4 */,
 				485302AB24B70F48005278AB /* AppDelegate.swift */,
 				485302AD24B70F48005278AB /* SceneDelegate.swift */,
 				485302AF24B70F48005278AB /* ViewController.swift */,
@@ -63,6 +74,7 @@
 				485302B424B70F49005278AB /* Assets.xcassets */,
 				485302B624B70F49005278AB /* LaunchScreen.storyboard */,
 				485302B924B70F49005278AB /* Info.plist */,
+				485302C124B71F6E005278AB /* AudioViewController.swift */,
 			);
 			path = "video-player";
 			sourceTree = "<group>";
@@ -125,9 +137,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485302C424B72118005278AB /* aac.aac in Resources */,
 				485302B824B70F49005278AB /* LaunchScreen.storyboard in Resources */,
 				485302B524B70F49005278AB /* Assets.xcassets in Resources */,
+				485302C624B721C0005278AB /* amr.amr in Resources */,
 				485302B324B70F48005278AB /* Main.storyboard in Resources */,
+				485302C024B7100B005278AB /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				485302B024B70F48005278AB /* ViewController.swift in Sources */,
+				485302C224B71F6E005278AB /* AudioViewController.swift in Sources */,
 				485302AC24B70F48005278AB /* AppDelegate.swift in Sources */,
 				485302AE24B70F48005278AB /* SceneDelegate.swift in Sources */,
 			);
